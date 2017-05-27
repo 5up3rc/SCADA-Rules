@@ -33,7 +33,7 @@ alert tcp any any -> any 102 (msg:"Start upload";content:"|03 00|";offset:0;dept
 alert tcp any any -> any 102 (msg:"Upload";content:"|03 00|";offset:0;depth:2;content:"|32 01|";offset:7;depth:2;content:"|1e|";offset:17;depth:1;sid:17;)
 alert tcp any any -> any 102 (msg:"End upload";content:"|03 00|";offset:0;depth:2;content:"|32 01|";offset:7;depth:2;content:"|1f|";offset:17;depth:1;sid:18;)
 #alert tcp any any -> any 102 (msg:"PLC Control";content:"|03 00|";offset:0;depth:2;content:"|32 01|";offset:7;depth:2;content:"|28|";offset:17;depth:1;sid:19;)
-alert tcp any any -> any 102 (msg:"Delet block";content:"|03 00|";offset:0;depth:2content:"|05 5f 44 45 4c 45|";sid:20;)
+alert tcp any any -> any 102 (msg:"Delet block";content:"|03 00|";offset:0;depth:2;content:"|05 5f 44 45 4c 45|";sid:20;)
 #
 #----------
 # Modbus Filter rules
